@@ -1,0 +1,57 @@
+
+EUR->EUR = 1
+EUR->ILS = 4.5
+EUR->USD = 1.35135
+ILS->EUR = 0.222222
+ILS->ILS = 1
+ILS->USD = 0.3003
+USD->EUR = 0.74
+USD->ILS = 3.33
+USD->USD = 1
+cm->cm = 1
+cm->km = 1e-05
+cm->m = 0.01
+cm->mm = 10
+g->g = 1
+g->kg = 0.001
+g->mg = 1000
+g->ton = 1e-06
+hour->hour = 1
+hour->min = 60
+hour->sec = 3600
+kg->g = 1000
+kg->kg = 1
+kg->mg = 1e+06
+kg->ton = 0.001
+km->cm = 100000
+km->km = 1
+km->m = 1000
+km->mm = 1e+06
+m->cm = 100
+m->km = 0.001
+m->m = 1
+m->mm = 1000
+mg->g = 0.001
+mg->kg = 1e-06
+mg->mg = 1
+mg->ton = 1e-09
+min->hour = 0.0166667
+min->min = 1
+min->sec = 60
+mm->cm = 0.1
+mm->km = 1e-06
+mm->m = 0.001
+mm->mm = 1
+sec->hour = 0.000277778
+sec->min = 0.0166667
+sec->sec = 1
+ton->g = 1e+06
+ton->kg = 1000
+ton->mg = 1e+09
+ton->ton = 1
+==============
+
+===============================================================================
+[doctest] test cases:      4 |      4 passed |      0 failed |      0 skipped
+[doctest] assertions:    326 |    326 passed |      0 failed |
+[doctest] Status: SUCCESS!
