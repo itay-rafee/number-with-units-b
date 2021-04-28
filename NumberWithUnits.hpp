@@ -12,7 +12,7 @@ namespace ariel {
 
     public:
         static void read_units(ifstream &infile);
-        NumberWithUnits(double a, string u);
+        NumberWithUnits(double a, const string& u);
 
         friend NumberWithUnits operator-(const NumberWithUnits& a);
         friend NumberWithUnits operator+(const NumberWithUnits& a);
@@ -32,9 +32,9 @@ namespace ariel {
         
         /* ++/-- operators */
         NumberWithUnits& operator++();
-        const NumberWithUnits operator++(int);
+        NumberWithUnits operator++(int);
         NumberWithUnits& operator--();
-        const NumberWithUnits operator--(int);
+        NumberWithUnits operator--(int);
 
         /* Multiplication by real number operators */
         friend NumberWithUnits operator*(double d, const NumberWithUnits& a);
@@ -42,6 +42,6 @@ namespace ariel {
         
         /* Input/Output operators */
         friend ostream& operator<<(ostream& os, const NumberWithUnits& a);
-        friend istream& operator>>(istream& input, NumberWithUnits& a);
+        friend istream& operator>>(istream& s, NumberWithUnits& n);
     };
 }

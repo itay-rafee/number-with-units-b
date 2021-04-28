@@ -17,9 +17,9 @@ namespace ariel
                units_sign[a1._unit].count(a2._unit) != 0;
     }
 
-    NumberWithUnits::NumberWithUnits(double a, string u)
+    NumberWithUnits::NumberWithUnits(double a, const string& u)
     {
-        if (!units_sign.count(u))
+        if (units_sign.count(u)==0)
         {
             throw invalid_argument("Illegal units!");
         }
@@ -49,7 +49,6 @@ namespace ariel
             line.erase(remove_if(line.begin(), line.end(), ::isspace), line.end());
             size_t delim = 1;
             while (delim < line.length() && line[delim] != '='){delim++;}
-            
             u1 = line.substr(1, delim - 1);
             stringstream ss(line.substr(delim + 1, line.length() - 1));
             ss >> n2 >> u2;
@@ -160,7 +159,7 @@ namespace ariel
         this->_val++;
         return *this;
     }
-    const NumberWithUnits NumberWithUnits::operator++(int) // postfix increment
+    NumberWithUnits NumberWithUnits::operator++(int) // postfix increment
     {
         NumberWithUnits copy = *this;
         this->_val++;
@@ -171,7 +170,7 @@ namespace ariel
         this->_val--;
         return *this;
     }
-    const NumberWithUnits NumberWithUnits::operator--(int) // postfix increment
+    NumberWithUnits NumberWithUnits::operator--(int) // postfix increment
     {
         NumberWithUnits copy = *this;
         this->_val--;
